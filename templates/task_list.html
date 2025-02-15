@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Ваши задачи</h2>
+    <table>
+        <tr>
+            <th>Заголовок</th>
+            <th>Описание</th>
+            <th>Дата выполнения</th>
+            <th>Статус</th>
+            <th>Редактирование</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.description }}</td>
+            <td>{{ task.due_date }}</td>
+            <td>{{ task.status }}</td>
+            <td><a class="edit-button" href="{{ url_for('edit_task', task_id=task.id) }}">Редактировать</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

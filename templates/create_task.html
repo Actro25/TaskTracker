@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание задачи</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    textarea {
+        height: 100px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .save-btn {
+        background-color: #28a745;
+        color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Создание задачи</h1>
+        <form method="POST">
+            <label for="title">Заголовок:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Описание:</label>
+            <textarea id="description" name="description"></textarea>
+            
+            <label for="due_date">Срок выполнения:</label>
+            <input type="date" id="due_date" name="due_date" required>
+            
+            <button type="submit" class="save-btn">Создать изменения</button>
+        </form>
+    </div>
+</body>
+</html>
